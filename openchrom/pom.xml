@@ -216,21 +216,21 @@
 								<goal>archive-products</goal>
 							</goals>
 							<phase>install</phase>
-							<configuration>
-								<formats>
-									<linux>tar.gz</linux>
-									<macosx>tar.gz</macosx>
-								</formats>
-								<products>
-									<product>
-										<rootFolders>
-											<macosx>OpenChrom.app</macosx>
-										</rootFolders>
-									</product>
-								</products>
-							</configuration>
 						</execution>
 					</executions>
+					<configuration>
+						<formats>
+							<linux>tar.gz</linux>
+							<macosx>tar.gz</macosx>
+						</formats>
+						<products>
+							<product>
+								<rootFolders>
+									<macosx>OpenChrom.app</macosx>
+								</rootFolders>
+							</product>
+						</products>
+					</configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.eclipse.tycho</groupId>
