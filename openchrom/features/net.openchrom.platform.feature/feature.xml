@@ -404,10 +404,6 @@
          version="0.0.0"/>
 
    <plugin
-         id="javax.activation"
-         version="0.0.0"/>
-
-   <plugin
          id="org.eclipse.core.variables"
          version="0.0.0"/>
 
