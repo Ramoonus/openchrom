@@ -30,7 +30,6 @@ public class Activator implements BundleActivator {
 	@Override
 	public void start(BundleContext bundleContext) throws Exception {
 
-		System.err.println("ACTIVATOR");
 		Activator.context = bundleContext;
 	}
 

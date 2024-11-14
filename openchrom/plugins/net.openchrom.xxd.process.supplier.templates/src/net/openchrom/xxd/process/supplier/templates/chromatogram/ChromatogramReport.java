@@ -23,7 +23,6 @@ import org.eclipse.chemclipse.model.core.IChromatogram;
 import org.eclipse.chemclipse.model.core.IPeak;
 import org.eclipse.chemclipse.model.notifier.UpdateNotifier;
 import org.eclipse.chemclipse.processing.core.IProcessingInfo;
-import org.eclipse.chemclipse.support.events.IChemClipseEvents;
 import org.eclipse.core.runtime.IProgressMonitor;
 
 import net.openchrom.xxd.process.supplier.templates.core.ReportWriter;
@@ -32,6 +31,8 @@ import net.openchrom.xxd.process.supplier.templates.settings.ChromatogramReportS
 
 public class ChromatogramReport extends AbstractChromatogramReportGenerator {
 
+	public static final String TOPIC_PROCESSING_FILE_CREATED = "processing/file/created/template/report"; // $NON-NLS-1$
+	//
 	private static final Logger logger = Logger.getLogger(ChromatogramReport.class);
 	//
 	public static final String DESCRIPTION = "Template Chromatogram Report";
@@ -51,7 +52,7 @@ public class ChromatogramReport extends AbstractChromatogramReportGenerator {
 					reportWriter.generate(file, append, chromatograms, reportSettings, monitor);
 					processingInfo.setProcessingResult(file);
 					if(PreferenceSupplier.isOpenReportAfterProcessing()) {
-						UpdateNotifier.update(IChemClipseEvents.TOPIC_PROCESSING_FILE_CREATED, file);
+						UpdateNotifier.update(TOPIC_PROCESSING_FILE_CREATED, file);
 					}
 				} catch(IOException e) {
 					logger.warn(e);

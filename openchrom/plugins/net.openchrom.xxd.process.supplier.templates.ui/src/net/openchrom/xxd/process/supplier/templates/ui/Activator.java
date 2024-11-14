@@ -29,6 +29,7 @@ import org.osgi.framework.BundleContext;
 import org.osgi.service.event.Event;
 import org.osgi.service.event.EventHandler;
 
+import net.openchrom.xxd.process.supplier.templates.chromatogram.ChromatogramReport;
 import net.openchrom.xxd.process.supplier.templates.preferences.PreferenceSupplier;
 import net.openchrom.xxd.process.supplier.templates.ui.icon.Icon;
 
@@ -72,7 +73,7 @@ public class Activator extends AbstractActivatorUI {
 
 		IEventBroker eventBroker = getEventBroker(bundleContext);
 		if(eventBroker != null) {
-			registeredEventHandler.add(registerEventHandler(eventBroker, IChemClipseEvents.EVENT_BROKER_DATA, IChemClipseEvents.TOPIC_PROCESSING_FILE_CREATED));
+			registeredEventHandler.add(registerEventHandler(eventBroker, IChemClipseEvents.EVENT_BROKER_DATA, ChromatogramReport.TOPIC_PROCESSING_FILE_CREATED));
 		}
 	}
 
@@ -87,7 +88,7 @@ public class Activator extends AbstractActivatorUI {
 					Object object = event.getProperty(property);
 					if(object instanceof File file) {
 						if(file.exists()) {
-							if(IChemClipseEvents.TOPIC_PROCESSING_FILE_CREATED.equals(topic)) {
+							if(ChromatogramReport.TOPIC_PROCESSING_FILE_CREATED.equals(topic)) {
 								SystemEditor.open(file);
 							}
 						}
