@@ -1290,7 +1290,7 @@
             id="com.lablicate.xxd.converter.supplier.asm.feature"
             kind="converter"
             license="End User License"
-            name="Allotrope Data Format"
+            name="Allotrope Simple Model"
             provider="Lablicate"
             urls="https://plugins.openchrom.net/allotrope,https://update.openchrom.net/">
          <icon image32="icons/32x32/ASM.png">
