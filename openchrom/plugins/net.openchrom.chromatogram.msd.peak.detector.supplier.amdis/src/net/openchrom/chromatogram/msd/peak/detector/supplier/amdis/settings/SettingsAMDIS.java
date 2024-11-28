@@ -33,13 +33,13 @@ import net.openchrom.chromatogram.msd.peak.detector.supplier.amdis.model.Thresho
 
 public class SettingsAMDIS extends AbstractProcessSettings {
 
-	@JsonProperty(value = "AMDIS Folder (AMDIS32)", defaultValue = "", required = true)
+	@JsonProperty(value = "AMDIS Folder (AMDIS32)", defaultValue = "")
 	@JsonPropertyDescription("Select the AMDIS folder, called AMDIS32.")
-	@FileSettingProperty(dialogType = DialogType.OPEN_DIALOG, onlyDirectory = true)
+	@FileSettingProperty(dialogType = DialogType.OPEN_DIALOG, onlyDirectory = true, allowEmpty = false)
 	private File amdisFolder = null;
-	@JsonProperty(value = "Data Folder (tmp)", defaultValue = "", required = true)
+	@JsonProperty(value = "Data Folder (tmp)", defaultValue = "")
 	@JsonPropertyDescription("Select the data folder, normally called tmp.")
-	@FileSettingProperty(dialogType = DialogType.OPEN_DIALOG, onlyDirectory = true)
+	@FileSettingProperty(dialogType = DialogType.OPEN_DIALOG, onlyDirectory = true, allowEmpty = false)
 	private File tmpFolder = null;
 	//
 	@JsonProperty(value = "Autodetect low m/z", defaultValue = "true")
