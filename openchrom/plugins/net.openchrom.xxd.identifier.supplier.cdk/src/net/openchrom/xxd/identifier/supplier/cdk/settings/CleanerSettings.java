@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2021, 2023 Lablicate GmbH.
+ * Copyright (c) 2021, 2024 Lablicate GmbH.
  * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -11,14 +11,15 @@
  *******************************************************************************/
 package net.openchrom.xxd.identifier.supplier.cdk.settings;
 
-import org.eclipse.chemclipse.chromatogram.xxd.identifier.settings.ChromatogramIdentifierAdapterSettings;
+import org.eclipse.chemclipse.chromatogram.xxd.identifier.settings.IChromatogramIdentifierSettings;
+import org.eclipse.chemclipse.model.identifier.AbstractIdentifierSettings;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 
 import net.openchrom.xxd.identifier.supplier.cdk.preferences.PreferenceSupplier;
 
-public class CleanerSettings extends ChromatogramIdentifierAdapterSettings {
+public class CleanerSettings extends AbstractIdentifierSettings implements IChromatogramIdentifierSettings {
 
 	@JsonPropertyDescription(value = "Remove targets where the SMILES formula is not set.")
 	@JsonProperty(value = "Delete Scan Targets", defaultValue = "false")
