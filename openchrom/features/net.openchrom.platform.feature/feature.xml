@@ -252,10 +252,6 @@
          version="0.0.0"/>
 
    <plugin
-         id="wrapped.edu.ucar.httpservices"
-         version="0.0.0"/>
-
-   <plugin
          id="com.google.guava"
          version="0.0.0"/>
 
@@ -269,14 +265,6 @@
 
    <plugin
          id="wrapped.org.jdom.jdom2"
-         version="0.0.0"/>
-
-   <plugin
-         id="wrapped.org.apache.httpcomponents.httpclient"
-         version="0.0.0"/>
-
-   <plugin
-         id="wrapped.org.apache.httpcomponents.httpcore"
          version="0.0.0"/>
 
    <plugin
