@@ -19,7 +19,6 @@ Require-Bundle: org.eclipse.core.runtime,
  com.google.protobuf;bundle-version="3.21.5",
  wrapped.com.google.re2j.re2j;bundle-version="1.7.0",
  wrapped.org.jdom.jdom2;bundle-version="2.0.6",
- org.slf4j.api;bundle-version="1.7.30",
  org.eclipse.chemclipse.tsd.converter;bundle-version="0.9.0",
  org.eclipse.chemclipse.tsd.model;bundle-version="0.9.0"
 Bundle-ActivationPolicy: lazy
@@ -31,4 +30,5 @@ Export-Package: net.openchrom.msd.converter.supplier.cdf.converter,
  net.openchrom.msd.converter.supplier.cdf.io.support,
  net.openchrom.msd.converter.supplier.cdf.model,
  net.openchrom.msd.converter.supplier.cdf.preferences
+Import-Package: org.slf4j;version="1.7.30"
 Service-Component: OSGI-INF/net.openchrom.msd.converter.supplier.cdf.converter.ChromatogramImportConverterTSD.xml
